@@ -1,9 +1,9 @@
 import {createBrowserRouter, createRoutesFromElements, Route, Routes} from "react-router-dom"
 import App from "./App"
-import Index from "./pages/Will/Index"
-import Index from "./pages/Asset/Index"
-import Show from "./pages/Will/Show"
-import Show from "./pages/Asset/Show"
+import Index from "./pages/WillIndex"
+import Index from "./pages/AssetIndex"
+import Show from "./pages/WillShow"
+import Show from "./pages/AssetShow"
 
 
 const router = createBrowserRouter(createRoutesFromElements(
