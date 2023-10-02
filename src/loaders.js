@@ -8,7 +8,7 @@ export const willIndexLoader = async () => {
     return wills
 }
 
-// willShowLoader - Get all WILLS for Will Show Route
+// willShowLoader - Get one WILL for Will Show Route
 export const willShowLoader = async ({params}) => {
     const response = await fetch(URL + `/will/${params.id}/`)
     const will = await response.json()
@@ -22,9 +22,10 @@ export const assetIndexLoader = async () => {
     return assets
 }
 
-// assetShowLoader - Get all ASSETS for Asset Show Route
+// assetShowLoader - Show one ASSET for Asset Show Route
 export const assetShowLoader = async ({params}) => {
     const response = await fetch(URL + `/asset/${params.id}`)
     const asset = await response.json()
     return asset
 }
+

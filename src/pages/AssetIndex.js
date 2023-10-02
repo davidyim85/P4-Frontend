@@ -1,5 +1,5 @@
-const Index = (props) => {
-    return <h1>Index</h1>
+const AssetIndex = (props) => {
+    return <h1>Asset Index</h1>
 };
 
-export default Index;
+export default AssetIndex;
