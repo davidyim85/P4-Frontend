@@ -6,6 +6,7 @@ import WillIndex from "./pages/WillIndex"
 import AssetIndex from "./pages/AssetIndex"
 import WillShow from "./pages/WillShow"
 import AssetShow from "./pages/AssetShow"
+import { createWillAction, updateWillAction, deleteWillAction } from "./actions"
 
 
 const router = createBrowserRouter(createRoutesFromElements(
@@ -13,9 +14,9 @@ const router = createBrowserRouter(createRoutesFromElements(
         <Route path="/will" element={<App/>}>
             <Route path="" element={<WillIndex/>} loader={willIndexLoader}/>
             <Route path=":id" element={<WillShow/>} loader={willShowLoader}/>
-            <Route path="create"/>
-            <Route path="update/:id"/>
-            <Route path="delete/:id"/>
+            <Route path="create" action={createWillAction}/>
+            <Route path="update/:id" action={updateWillAction}/>
+            <Route path="delete/:id" action={deleteWillAction}/>
         </Route>
 
         <Route path="/asset" element={<App/>}>
