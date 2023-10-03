@@ -47,14 +47,10 @@ HTML, CSS, SASS, Python, JavaScript, PostgreSQL, Django, ReactJS, Neon, Express.
 |Show|Show one asset, Form to update an existing asset, Delete action, Update action|
 |Header|App name, navigation bar, Links to other pages|
 
-## Mockup of User Interface
+## Wireframe of User Interface
 ### **Desktop Views**
-![Desktop view of Index page]()
-![Desktop view of Show page]()
-
-### **Mobile Views**
-![Mobile view of Index page]()
-![Mobile view of Show page]()
+![View of Will pages, Index and Show](src/images/Wills-wireframe.jpg)
+![View of Asset pages, Index and Show](src/images/Assets-wireframe.jpg)
 
 <!-- # Getting Started with Create React App
 

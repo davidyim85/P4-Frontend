@@ -1,4 +1,4 @@
-import {createBrowserRouter, createRoutesFromElements, Route, Routes} from "react-router-dom"
+import {createBrowserRouter, createRoutesFromElements, Route} from "react-router-dom"
 import App from "./App"
 import { willIndexLoader, willShowLoader } from "./loaders"
 import { assetIndexLoader, assetShowLoader } from "./loaders"
@@ -29,5 +29,38 @@ const router = createBrowserRouter(createRoutesFromElements(
         </Route>
     </>
 ))
+
+// const router = createBrowserRouter(createRoutesFromElements(([
+//     {
+//         path: "/",
+//         element: <App/>,
+//         children: [
+//             {
+//                 path: "will/",
+//                 element: <WillIndex/>,
+//                 loader: <willIndexLoader/>,
+//             },
+//             {
+//                 path: "will/:id",
+//                 element: <WillShow/>,
+//                 loader: <willShowLoader/>,
+//             },
+//             {
+//                 path: "will/create",
+//                 action: {createWillAction},
+//             },
+//             {
+//                 path: "will/update/:id",
+//                 action: {updateWillAction},
+//             },
+//             {
+//                 path: "will/delete/:id",
+//                 action: {deleteWillAction},
+//             },
+
+//         ],
+//     },
+// ])
+// ));
 
 export default router

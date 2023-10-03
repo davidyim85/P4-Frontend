@@ -24,7 +24,7 @@ export const assetIndexLoader = async () => {
 
 // assetShowLoader - Show one ASSET for Asset Show Route
 export const assetShowLoader = async ({params}) => {
-    const response = await fetch(URL + `/asset/${params.id}`)
+    const response = await fetch(URL + `/asset/${params.id}/`)
     const asset = await response.json()
     return asset
 }
