@@ -37,6 +37,10 @@ export const updateWillAction = async ({request, params}) => {
 
     // Get Will id
     const id = params.id
+    const date = params.created_when
+
+    // Get date Will created
+    //const date_created = formData.created_when
 
     // Construct request body
     const updatedWill = {
@@ -44,7 +48,7 @@ export const updateWillAction = async ({request, params}) => {
         user_address: formData.get("user_address"),
         user_phone: formData.get("user_phone"),
         user_tax_id: formData.get("user_tax_id"),
-        created_when: created_when,
+        created_when: new Date()
     }
 
     // Send request to backend
@@ -103,7 +107,7 @@ export const updateAssetAction = async ({request, params}) => {
     // Send request to backend
 
     // Redirect back to Show page
-    return redirect(`/asset/${id}`)
+    //return redirect(`/asset/${id}`)
 }
 
 // DELETE A WILL
