@@ -21,7 +21,7 @@ const WillIndex = (props) => {
                 <input type="text" id="user_phone" name="user_phone" placeholder="999-999-9999"/>
                 <label for="user_tax_id"></label>Person's tax ID or other unique identifier:<br/>
                 <input type="text" id="user_tax_id" name="user_tax_id" placeholder="###-##-####"/>
-                <input type="submit" value="submit"/>
+                <button>Create Will</button>
             </Form>
         </div>
         </>
