@@ -37,8 +37,10 @@ export const updateWillAction = async ({request, params}) => {
 
     // Get Will id
     const id = params.id
-    const date = params.created_when
+    //const date = params.created_when
 
+    // Need to fix the date situation to grab the original date created
+    // Might add to the model "last_edited" 
     // Get date Will created
     //const date_created = formData.created_when
 
@@ -87,8 +89,22 @@ export const createAssetAction = async ({request}) => {
     const formData = await request.formData()
 
     // Construct request body
+    const newAsset = {
+        //will_id = models.ForeignKey("Will", on_delete=models.DO_NOTHING)
+        name: formData.get("name"),
+        description: formData.get("description"),
+        quantity: formData.get("quantity"),
+        location: formData.get("location"),
+    }
 
     // Send request to backend
+    await fetch(URL + "/asset/", {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newAsset)
+    })
 
     // Redirect back to Index page
     return redirect("/asset")
@@ -101,20 +117,39 @@ export const updateAssetAction = async ({request, params}) => {
     const formData = await request.formData()
 
     // Get Asset id
+    const id = params.id
 
     // Construct request body
+    const updatedAsset = {
+        //will_id = models.ForeignKey("Will", on_delete=models.DO_NOTHING)
+        name: formData.get("name"),
+        description: formData.get("description"),
+        quantity: formData.get("quantity"),
+        location: formData.get("location"),
+    }
 
     // Send request to backend
+    await fetch(URL + `/asset/${id}/`, {
+        method: "put",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedAsset)
+    })
 
     // Redirect back to Show page
-    //return redirect(`/asset/${id}`)
+    return redirect(`/asset/${id}`)
 }
 
-// DELETE A WILL
+// DELETE AN ASSET
 export const deleteAssetAction = async ({params}) => {
     // Get Asset id
+    const id = params.id
 
     // Send request to backend
+    await fetch(URL + `/asset/${id}/`, {
+        method: "delete",
+    })
 
     // Redirect back to Show page
     return redirect("/asset")

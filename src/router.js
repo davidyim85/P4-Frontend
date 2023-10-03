@@ -7,6 +7,7 @@ import AssetIndex from "./pages/AssetIndex"
 import WillShow from "./pages/WillShow"
 import AssetShow from "./pages/AssetShow"
 import { createWillAction, updateWillAction, deleteWillAction } from "./actions"
+import { createAssetAction, updateAssetAction, deleteAssetAction } from "./actions"
 
 
 const router = createBrowserRouter(createRoutesFromElements(
@@ -22,9 +23,9 @@ const router = createBrowserRouter(createRoutesFromElements(
         <Route path="/asset" element={<App/>}>
             <Route path="" element={<AssetIndex/>} loader={assetIndexLoader}/>
             <Route path=":id" element={<AssetShow/>} loader={assetShowLoader}/>
-            <Route path="create"/>
-            <Route path="update/:id"/>
-            <Route path="delete/:id"/>
+            <Route path="create" action={createAssetAction}/>
+            <Route path="update/:id" action={updateAssetAction} />
+            <Route path="delete/:id" action={deleteAssetAction} />
         </Route>
     </>
 ))

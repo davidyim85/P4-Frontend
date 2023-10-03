@@ -1,5 +1,10 @@
+import AssetComponent from "../components/AssetComponent";
+import { useLoaderData } from "react-router-dom";
+
 const AssetIndex = (props) => {
-    return <h1>Asset Index</h1>
+    const assets = useLoaderData();
+    
+    return (assets.map((asset) => <AssetComponent asset={asset} key={asset.id} />))
     // <Form action="/create" method="post">
     //             <label for=""></label><br/>
     //             <input type="text" id="" name="" placeholder=""/>
