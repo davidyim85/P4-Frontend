@@ -18,19 +18,19 @@ const AssetShow = (props) => {
             <h2>{asset.quantity}</h2>
             <h2>{asset.location}</h2>
             <h2>{asset.description}</h2>
-            {/* <div style={{ textAlign: "center" }}>
-                <h2>{`Edit ${will.user_name}'s information`}</h2> */}
-                {/* <Form action={`/will/update/${will.id}`} method="post">
-                    <input type="text" id="user_name" name="user_name" placeholder="FirstName LastName" defaultValue={will.user_name}/>
-                    <input type="text" id="user_address" name="user_address" placeholder="1000 Main Street, City, State, Zip" defaultValue={will.user_address}/>
-                    <input type="text" id="user_phone" name="user_phone" placeholder="999-999-9999" defaultValue={will.user_phone}/>
-                    <input type="text" id="user_tax_id" name="user_tax_id" placeholder="###-##-####" defaultValue={will.user_tax_id}/>
-                    <button>Update details</button>
+            <div style={{ textAlign: "center" }}>
+                <h2>{`Edit ${asset.name}`}</h2>
+                <Form action={`/asset/update/${asset.id}`} method="post">
+                    <input type="text" id="name" name="name" placeholder="Asset Name" defaultValue={asset.name}/>
+                    <input type="text" id="description" name="description" placeholder="Asset description" defaultValue={asset.description}/>
+                    <input type="text" id="quantity" name="quantity" placeholder="Number/amount" defaultValue={asset.quantity}/>
+                    <input type="text" id="location" name="location" placeholder="Asset location" defaultValue={asset.location}/>
+                    <button>Update asset</button>
                 </Form>
-                <Form action={`/will/delete/${will.id}`} method="post">
-                    <button>{`Delete Will #${will.id}`}</button>
-                </Form> */}
-            {/* </div> */}
+                <Form action={`/asset/delete/${asset.id}`} method="post">
+                    <button>{`Delete ${asset.name}`}</button>
+                </Form>
+            </div>
             <Link to="/asset">
                 <button>Go back to all assets</button>
             </Link>
