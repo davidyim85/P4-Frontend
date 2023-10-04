@@ -12,7 +12,7 @@ import { createAssetAction, updateAssetAction, deleteAssetAction } from "./actio
 
 const router = createBrowserRouter(createRoutesFromElements(
     <>
-        <Route path="/will" element={<App/>}>
+        <Route path="/" element={<App/>}>
             <Route path="" element={<WillIndex/>} loader={willIndexLoader}/>
             <Route path=":id" element={<WillShow/>} loader={willShowLoader}/>
             <Route path="create" action={createWillAction}/>
