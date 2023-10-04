@@ -20,13 +20,13 @@ const router = createBrowserRouter(createRoutesFromElements(
             <Route path="delete/:id" action={deleteWillAction}/>
         </Route>
 
-        <Route path="/asset" element={<App/>}>
+        {/* <Route path="/asset" element={<App/>}>
             <Route path="" element={<AssetIndex/>} loader={assetIndexLoader}/>
             <Route path=":id" element={<AssetShow/>} loader={assetShowLoader}/>
             <Route path="create" action={createAssetAction}/>
             <Route path="update/:id" action={updateAssetAction} />
             <Route path="delete/:id" action={deleteAssetAction} />
-        </Route>
+        </Route> */}
     </>
 ))
 
